@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Despedir from './components/componentes/Despedir';
+import './filtros';
 
 Vue.config.productionTip = false
 
@@ -38,6 +39,7 @@ Vue.directive('blink', {
     clearInterval(el.dataset.intervalId);
   }
 });
+
 
 new Vue({
   // el: '#app',
