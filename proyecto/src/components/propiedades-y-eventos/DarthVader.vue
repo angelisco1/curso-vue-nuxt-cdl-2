@@ -1,7 +1,11 @@
 <template>
   <div>
     <h3>CMP Darth Vader</h3>
-    <leia :miNombre="nombreLeia"></leia>
+    <div>
+      <p>Mi hijo es: {{nombreLuke}}</p>
+      <p>Mi hija es: {{nombreLeia}}</p>
+    </div>
+    <leia :miNombre="nombreLeia" :nombreHermano="nombreLuke"></leia>
     <luke :miNombre="nombreLuke" @nombreLukeCambiado="cambiarNombreLuke"></luke>
   </div>
 </template>
