@@ -1,0 +1,5 @@
+<template>
+  <div>
+    <h3>Editar usuario</h3>
+  </div>
+</template>

@@ -4,25 +4,25 @@
 
     <card>
       <h1 slot="header">{{datos.nombre}}</h1>
-      <div slot="content">
+      <template slot="content">
         <img width="150px" :src="datos.logo" alt="">
         <p>{{datos.descripcion}}</p>
-      </div>
+      </template>
     </card>
 
     <card>
       <img slot="header" width="150px" :src="datos.logo" alt="">
-      <div slot="content">
+      <template slot="content">
         <h1>{{datos.nombre}}</h1>
         <p>{{datos.descripcion}}</p>
-      </div>
+      </template>
     </card>
 
     <card>
-      <div slot="content">
+      <template slot="content">
         <h1>{{datos.nombre}}</h1>
         <p>{{datos.descripcion}}</p>
-      </div>
+      </template>
     </card>
   </div>
 </template>

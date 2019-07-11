@@ -29,7 +29,8 @@
     width: 100%;
   }
 
-  div.content > div {
+  /* div.content > div { */
+  div.content {
     text-align: center;
     margin: 0 auto;
     width: 80%;

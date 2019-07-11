@@ -1,6 +1,6 @@
 <template>
   <div @click="mostrarMsg('un DIV', $event)">
-    <button type="button" v-on:click="decrementar"  @click="mostrarMsg('un BUTTON', $event)">-</button>
+    <button type="button" v-on:click="decrementar"  @click.stop="mostrarMsg('un BUTTON', $event)">-</button>
     <!-- <span
       v-bind:id="idSpan"
       :style="{color: (cuenta < 0 ? 'red' : 'green'), backgroundColor: 'blue'}"
@@ -33,7 +33,7 @@ export default {
       this.cuenta = Number(event.target.value)
     },
     mostrarMsg(texto, event) {
-      event.stopPropagation();
+      // event.stopPropagation();
       // console.log('Has pulsado sobre ' + event.target.tagName);
       console.log('Has pulsado sobre ' + texto);
     },
