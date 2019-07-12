@@ -9,8 +9,9 @@
     <!-- <filtros></filtros> -->
     <!-- <formulario></formulario> -->
     <!-- <modificadores></modificadores> -->
-    <asincrono-dinamico></asincrono-dinamico>
+    <!-- <asincrono-dinamico></asincrono-dinamico> -->
     <!-- <rutas></rutas> -->
+    <ej-vuex></ej-vuex>
   </div>
 </template>
 
@@ -26,6 +27,7 @@ import Formulario from './components/formularios/Formulario';
 import Modificadores from './components/modificadores/Modificadores';
 import AsincronoDinamico from './components/asincronos-y-dinamicos/AsincronoDinamico';
 import Rutas from './components/rutas/Rutas';
+import EjVuex from './components/vuex/EjVuex';
 
 export default {
   components: {
@@ -40,6 +42,7 @@ export default {
     modificadores: Modificadores,
     asincronoDinamico: AsincronoDinamico,
     rutas: Rutas,
+    ejVuex: EjVuex
   }
 }
 </script>
