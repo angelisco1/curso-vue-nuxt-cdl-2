@@ -9,8 +9,8 @@
     <!-- <filtros></filtros> -->
     <!-- <formulario></formulario> -->
     <!-- <modificadores></modificadores> -->
-    <!-- <asincrono-dinamico></asincrono-dinamico> -->
-    <rutas></rutas>
+    <asincrono-dinamico></asincrono-dinamico>
+    <!-- <rutas></rutas> -->
   </div>
 </template>
 
