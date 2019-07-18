@@ -1,0 +1,41 @@
+.btn {
+  width: 40%;
+  height: 5vw;
+  max-height: 70px;
+  font-size: 2vw;
+  box-shadow: 5px 5px 10px black;
+}
+
+.btn.btn-primary {
+  background-color: #ffca6a;
+  color: #000000;
+}
+
+.btn.btn-primary:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffca6a;
+}
+
+.btn.btn-success {
+  background-color: white;
+  color: #40339E;
+}
+
+.btn.btn-success:hover {
+  background-color: #40339E;
+  color: white;
+}
+
+.btn.btn-danger {
+  background-color: #7FC7C4;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.btn.btn-danger:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #7FC7C4;
+}
+
+section.lista-memes {
+  margin-bottom: 100px;
+}
