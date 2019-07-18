@@ -1,4 +1,5 @@
 import pkg from './package'
+import config from './config';
 
 export default {
   mode: 'universal',
@@ -7,7 +8,8 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: pkg.name + '!',
+    titleTemplate: 'MI PAGINA: %s',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -15,18 +17,33 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    bodyAttrs: {
+      class: 'con-margenes'
+    }
   },
+
 
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: {
+    color: '#000',
+    height: '20px',
+    failedColor: 'yellow'
+  },
+
+  loadingIndicator: {
+    color: 'blue',
+    background: 'black',
+    name: 'wandering-cubes'
+  },
 
   /*
   ** Global CSS
   */
   css: [
+    '@/assets/css/styles.css'
   ],
 
   /*
@@ -35,13 +52,28 @@ export default {
   plugins: [
     '~/plugins/componentes.js',
     '~/plugins/filtros.js',
+    '~/plugins/authPlugin.js',
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
+
+  axios: {
+    // baseURL: 'https://jsonplaceholder.typicode.com/'
+    baseURL: config.URL_AXIOS
+  },
+
+  env: {
+    URL_AXIOS: config.URL_AXIOS
+  },
+
+  router: {
+    middleware: ['log', 'auth']
+  },
 
   /*
   ** Build configuration
@@ -51,6 +83,7 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      // config.resolve.extensions = ['.js']
     }
   }
 }

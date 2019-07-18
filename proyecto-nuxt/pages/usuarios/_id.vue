@@ -1,6 +1,7 @@
 <template>
   <div>
     <titulo :titulo="tituloPagina" />
+    <p>Nombre: {{usuario.name}}</p>
     <p>{{new Date() | anyo}}</p>
   </div>
 </template>
@@ -23,12 +24,28 @@ export default {
       return 'Usuario ' + this.$route.params.id;
     }
   },
-  beforeRouteEnter(to, from, next) {
-    console.log('Pasa')
-    if (process.server) {
-      next(true);
-    } else {
-      next(confirm('Estas logueado??'));
+  // beforeRouteEnter(to, from, next) {
+  //   console.log('Pasa')
+  //   if (process.server) {
+  //     next(true);
+  //   } else {
+  //     next(confirm('Estas logueado??'));
+  //   }
+  // },
+  asyncData(context) {
+    // console.log(context.params)
+    return fetch(`https://jsonplaceholder.typicode.com/users/${context.params.id}`)
+      .then(resp => resp.json())
+      .then(usuario => {
+        return {
+          usuario: usuario
+        }
+      })
+  },
+  middleware: 'log',
+  head() {
+    return {
+      title: 'Usuario 2'
     }
   }
 }

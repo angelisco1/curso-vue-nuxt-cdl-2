@@ -11,7 +11,8 @@ import Nav from '~/components/Nav.vue'
 export default {
   components: {
     miNav: Nav,
-  }
+  },
+  middleware: 'log'
 }
 </script>
 

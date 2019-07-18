@@ -1,0 +1,8 @@
+nav > ul > li {
+  list-style: none;
+  display: inline;
+}
+
+.con-margenes {
+  margin: 30px !important;
+}
